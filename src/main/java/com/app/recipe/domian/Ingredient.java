@@ -1,8 +1,13 @@
 package com.app.recipe.domian;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+@Getter
+@Setter
 @Entity
 public class Ingredient {
 
@@ -14,8 +19,11 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
-//    private UnitOfMeasure uom;
+    @OneToOne
+    private UnitOfMeasure uom;
 
     @ManyToOne
     private Recipe recipe;
+
+
 }
