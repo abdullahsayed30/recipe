@@ -1,5 +1,6 @@
 package com.app.recipe.domian;
 
+import com.app.recipe.domian.enums.Difficulty;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
